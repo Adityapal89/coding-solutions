@@ -12,30 +12,34 @@ class Node {
 class Solution {
     public static int findMax(Node root) {
         // code here
-        ArrayList<Integer> arr = new ArrayList<>();
-        int max = Integer.MIN_VALUE;
-        preOrder(root,arr);
-        for(int i=0; i<arr.size(); i++){
-            if(arr.get(i) > max){
-                max = arr.get(i);
-            }
-        }
-        return max;
+        // ArrayList<Integer> arr = new ArrayList<>();
+        // int max = Integer.MIN_VALUE;
+        // preOrder(root,arr);
+        // for(int i=0; i<arr.size(); i++){
+        //     if(arr.get(i) > max){
+        //         max = arr.get(i);
+        //     }
+        // }
+        // return max;
+        Node temp = root;
+        if(temp == null) return Integer.MIN_VALUE;
+        return Math.max(temp.data, Math.max(findMax(temp.left), findMax(temp.right)));
         
     }
 
     public static int findMin(Node root) {
         // code here
-        ArrayList<Integer> arr = new ArrayList<>();
-        int min = Integer.MAX_VALUE;
-        preOrder(root,arr);
-        for(int i=0; i<arr.size(); i++){
-            if(arr.get(i) < min){
-                min = arr.get(i);
-            }
-        }
-        return min;
-        
+        // ArrayList<Integer> arr = new ArrayList<>();
+        // int min = Integer.MAX_VALUE;
+        // preOrder(root,arr);
+        // for(int i=0; i<arr.size(); i++){
+        //     if(arr.get(i) < min){
+        //         min = arr.get(i);
+        //     }
+        // }
+        // return min;
+        if(root == null) return Integer.MAX_VALUE;
+        return Math.min(root.data, Math.min(findMin(root.left), findMin(root.right)));
     }
     public static void preOrder(Node root, ArrayList<Integer> arr){
         if(root == null) return;
