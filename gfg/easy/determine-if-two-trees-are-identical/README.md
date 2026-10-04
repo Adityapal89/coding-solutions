@@ -28,7 +28,7 @@ Explanation: Trees are not identical.
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-04T18:55:48.682Z  
+**Submitted:** 2026-10-04T19:12:26.354Z  
 
 ```java
 /*
@@ -45,13 +45,17 @@ class Node{
 class Solution {
     public boolean isIdentical(Node r1, Node r2) {
         // code here
-        ArrayList<Integer> arr1 = new ArrayList<>();
-        ArrayList<Integer> arr2 = new ArrayList<>();
-        preorder1(r1,arr1);
-        preorder2(r2,arr2);
-        if(arr1.equals(arr2)) return true;
+        // ArrayList<Integer> arr1 = new ArrayList<>();
+        // ArrayList<Integer> arr2 = new ArrayList<>();
+        // preorder1(r1,arr1);
+        // preorder2(r2,arr2);
+        // if(arr1.equals(arr2)) return true;
+        // return false;
         
-        return false;
+        if(r1 == null && r2 == null) return true;
+        if(r1 == null || r2 == null) return false;
+        if(r1.data != r2.data) return false;
+        return isIdentical(r1.left, r2.left) && isIdentical(r1.right, r2.right);
     
     }
     
