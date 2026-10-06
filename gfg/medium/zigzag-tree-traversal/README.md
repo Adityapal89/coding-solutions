@@ -37,7 +37,7 @@ Final result: [7, 7, 9, 8, 8, 6, 9, 10]
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-06T21:53:26.230Z  
+**Submitted:** 2026-10-06T21:56:59.759Z  
 
 ```java
 class Solution {
