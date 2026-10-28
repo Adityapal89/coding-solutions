@@ -50,9 +50,9 @@ Output: 4
 ## Solution
 
 **Language:** Java  
-**Runtime:** 10 ms (beats 14.02%)  
-**Memory:** 46.8 MB (beats 85.52%)  
-**Submitted:** 2026-10-28T09:07:58.747Z  
+**Runtime:** 8 ms (beats 32.14%)  
+**Memory:** 46.9 MB (beats 79.79%)  
+**Submitted:** 2026-10-28T09:13:51.274Z  
 
 ```java
 class Solution {
