@@ -50,20 +50,20 @@ Output: 4
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 41.7 MB  
-**Submitted:** 2026-10-28T09:05:43.831Z  
+**Runtime:** 10 ms (beats 14.02%)  
+**Memory:** 46.8 MB (beats 85.52%)  
+**Submitted:** 2026-10-28T09:07:58.747Z  
 
 ```java
 class Solution {
     public int islandPerimeter(int[][] grid) {
         int ans = 0;
         for(int i=0; i<grid.length; i++){
-            for(int j=0; j<grid[0].length; j++){
+            for(int j=0; j< grid[0].length; j++){
                 if(grid[i][j] == 1){
                     ans += 4;
-                    if(i>0 && grid[i-1][j] == 1) ans--;
-                    if(j>0 && grid[i][j-1] == 1) ans--;
+                    if(i>0 && grid[i-1][j] == 1) ans -= 2;
+                    if(j>0 && grid[i][j-1] == 1) ans -= 2;
                 }
             }
         }
