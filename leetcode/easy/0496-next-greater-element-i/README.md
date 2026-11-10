@@ -14,6 +14,8 @@ Return  *an array* `ans` *of length* `nums1.length` *such that* `ans[i]` *is the
 
  
 
+Original
+Java
  **Example 1:** 
 
 ```
@@ -53,9 +55,9 @@ Explanation: The next greater element for each value of nums1 is as follows:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 41.6 MB  
-**Submitted:** 2026-11-10T03:54:51.372Z  
+**Runtime:** 5 ms (beats 16.84%)  
+**Memory:** 44.1 MB (beats 98.27%)  
+**Submitted:** 2026-11-10T17:41:55.530Z  
 
 ```java
 class Solution {
