@@ -54,27 +54,23 @@ Explanation: The next greater element for each value of nums1 is as follows:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 41.9 MB  
-**Submitted:** 2026-11-10T03:46:56.374Z  
+**Memory:** 41.6 MB  
+**Submitted:** 2026-11-10T03:54:51.372Z  
 
 ```java
 class Solution {
     public int[] nextGreaterElement(int[] nums1, int[] nums2) {
-        int idx = 0;
         int[] arr = new int[nums1.length];
+        boolean found = false;
         for(int i=0; i<nums1.length; i++){
-            for(int j=0; j<nums2.length-1; j++){
+            found = false;
+            for(int j=0; j<nums2.length; j++){
                 if(nums1[i] == nums2[j]){
-                    if(j == nums2.length){
-                        arr[i] = -1;
-                        break;
-                    } else if(nums2[j+1] > nums1[i]){
-                        arr[i] = nums2[j+1];
-                        break;
-                    }else{
-                        arr[i] = -1;
-                        break;
-                    }
+                    found = true;
+                }
+                if(found && nums2[j] > nums1[i]){
+                    arr[i] = nums2[j];
+                    break;
                 }
             }
         }
